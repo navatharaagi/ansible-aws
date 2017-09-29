@@ -1,0 +1,18 @@
+--- # EC2_AMI for creating a basic AMI template from an existing image
+- hosts: local
+  connection: local
+  become_method: sudo
+  gather_facts: no
+  vars_files:
+  - files/awscreds.yml
+  tasks:
+  - name: Basic Provisioning of an AMI from our Instance
+    ec2_ami:
+      region: '{{ aws_region }}'
+      instance_id: i-0e985deea0b814a10
+      wait: no
+      name: mynewami
+      tags:
+        Name: MynewAMI
+        Service:  TestAMIService
+    register: instance

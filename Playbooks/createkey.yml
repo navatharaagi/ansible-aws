@@ -1,0 +1,12 @@
+--- # Gather EC2 facts from my remote instances
+- hosts: local
+  remote_user: test
+  become_method: sudo
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: example2 ec2 key
+      ec2_key:
+       name: example2
+       state: absent
+       region: us-west-1

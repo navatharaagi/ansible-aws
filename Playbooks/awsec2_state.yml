@@ -1,0 +1,14 @@
+--- # EC2 - Start/Stop/Terminate Module Use Example
+- hosts: local
+  connection:  local
+  remote_user:  test
+  become_method: sudo
+  gather_facts: no
+  vars_files:
+  - files/awscreds.yml
+  tasks:
+  -  name: Manage the state of an instance
+     ec2:
+      region: '{{ aws_region }}'
+      instance_ids: i-0e985deea0b814a10
+      state:  running
