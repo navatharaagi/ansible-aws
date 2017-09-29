@@ -12,6 +12,6 @@
       region: '{{ aws_region }}'
       owner: self
       ami_tags:
-        name:  MyNewAMI22
-        no_result_action:  fail
+        name: MyNewAMI
+        no_result_action: fail
     register:  ami_find
