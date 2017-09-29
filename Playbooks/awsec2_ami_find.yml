@@ -15,5 +15,3 @@
         name:  MyNewAMI22
         no_result_action:  fail
     register:  ami_find
-    -  debug:  msg={{  ami_find.results[0].ami_id }}
-    -  debug:  msg={{  ami_find.results[0].name }}
