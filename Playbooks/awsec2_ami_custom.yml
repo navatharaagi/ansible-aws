@@ -6,7 +6,7 @@
   vars_files:
   - files/awscreds.yml
   tasks:
-  - name: More Advanced Provisioning of an AMI from our Instance
+  - name: More Advanced Provisioning of an AMI from our Instance in us region 
     ec2_ami:
       region: '{{ aws_region }}'
       instance_id: i-0e985deea0b814a10
@@ -19,5 +19,5 @@
         - device_name:  /dev/sdb1
           size: 100
           delete_on_termination: true
-          volume_type:  gp2  
+          volume_type:  gp2
     register: instance
