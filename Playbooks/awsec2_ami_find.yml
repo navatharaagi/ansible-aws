@@ -9,8 +9,8 @@
   tasks:
   - name: Find our AMI ID
     ec2_ami_find:
-      region: “{{ aws_region }}”
-      owner:  self         /*self search for AMI
+      region: '{{ aws_region }}'
+      owner: self         
       ami_tags:
         name:  MyNewAMI22
         no_result_action:  fail
