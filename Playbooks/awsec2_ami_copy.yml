@@ -1,4 +1,4 @@
---- # MODULE EC2_AMI_COPY EXAMPLE File 
+--- # MODULE EC2_AMI_COPY EXAMPLE
 - hosts: local
   connection: local
   remote_user: test
