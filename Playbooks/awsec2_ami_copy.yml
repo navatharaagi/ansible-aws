@@ -10,7 +10,7 @@
   - name: Copy AMI from one region to another
     ec2_ami_copy:
       region: '{{ aws_region }}'
-      dest_region: us-east-1
+      source_region: us-east-1
       source_image_id: ami-043f0f64
       wait: no
       name: useastami1
