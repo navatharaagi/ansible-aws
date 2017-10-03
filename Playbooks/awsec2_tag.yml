@@ -4,5 +4,10 @@
   remote_user: test
   become_method: sudo
   gather_facts: no
+  vars_files:
+  - files/awscreds.yml
   tasks:
   - name: Find our AMI ID
+    ec2_ami_find:
+      region: '{{ aws_region }}'
+      owner: self
