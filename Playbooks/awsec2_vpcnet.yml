@@ -17,4 +17,5 @@
       cidr_block:  172.17.1.0/24
     register:  vpcnetblock
   - name: Print the resulting JSON output
-    debug:  msg=vpcnetblock
+    debug:  msg=vpcnetblock  #MyNewVPC will be created with given ip
+   
