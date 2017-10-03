@@ -5,9 +5,4 @@
   become_method: sudo
   gather_facts: no
   tasks:
-  - name: Label an existing volume so we know what it is
-    ec2_tags:
-      state: present
-      tags:
-        Name: data_volume
-    register: voltags
+  - name: Find our AMI ID
