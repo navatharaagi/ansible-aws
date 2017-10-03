@@ -7,10 +7,10 @@
   vars_files:
   - files/awscreds.yml
   tasks:
-  - name: Label an existing volume so we know what it is
-    ec2_tags:
-      aws_access_key:  “{{ aws_id }}”
-      aws_secret_key:  “{{ aws_key }}”
+  - name: Find our AMI ID
+    ec2_ami_find:
+      region: '{{ aws_region }}'
+      owner: self
       region:  “{{aws_region }}”
       resource: Paste the copied volume id
       state: present
