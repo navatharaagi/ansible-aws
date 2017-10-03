@@ -17,4 +17,4 @@
       tags:
         Name: data_volume
     register:  voltags
-/*to tag snapshot,instance,SG,…give their ids in resource instead of volumeid .
+# to tag snapshot,instance,SG,…give their ids in resource instead of volumeid .
