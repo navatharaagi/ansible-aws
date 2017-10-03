@@ -9,16 +9,16 @@
   tasks:
   - name: Basic CPU Alarm Creation
     ec2_metric_alarm:
-    region: “{{ aws_region }}”
-    state: present
-    name: OurFirstAlarmTest
-    metric: “CPUUtilization”
-    namespace: “AWS/EC2”
-    statistic: Average
-    comparision: “>=“
-    threshold: 25.0
-    period: 300
-    evaluation_periods: 6  
-    unit: “Percent”
-    description: “This alarm fires when CPU is greater than 25% for 30mins"
-    dimensions: { ‘InstanceID’ : ‘Copy & Paste Instance ID’ }
+      region: “{{ aws_region }}”
+      state: present
+      name: OurFirstAlarmTest
+      metric: “CPUUtilization”
+      namespace: “AWS/EC2”
+      statistic: Average
+      comparision: “>=“
+      threshold: 25.0
+      period: 300
+      evaluation_periods: 6
+      unit: “Percent”
+      description: “This alarm fires when CPU is greater than 25% for 30mins"
+      dimensions: { ‘InstanceID’ : ‘Copy & Paste Instance ID’ }
