@@ -1,0 +1,19 @@
+--- # EC2_REMOTE FACTS MODULE EXAMPLE
+- hosts:  localhost
+  connection: local
+  remote_user: test
+  become_method: sudo
+  gather_facts: no
+  vars_files:
+  - files/awscreds.yml
+  tasks:
+  - name: Take a snapshot of the running instance root volume
+    ec2_snapshot:
+      aws_access_key: “{{ aws_id }}”
+      aws_secret_key: “{{ aws_key }}”
+      region: “{{ aws_region }}”
+      instance_id:  copy & paste instance id from EC2
+      device_name:  copy $ paste Root Device from EC2 instance summary
+      description:  Root Volume Snapshot Taken During Ansible Course
+      wait:  no
+    register: snapshot
