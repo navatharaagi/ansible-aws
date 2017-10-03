@@ -4,6 +4,8 @@
   remote_user: test
   become_method: yes
   gather_facts: no
+  vars_files:
+  - files/awscreds.yml
   tasks:
   - name: Basic Security Group Creation
     ec2_group:
