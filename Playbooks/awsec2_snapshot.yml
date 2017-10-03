@@ -4,6 +4,8 @@
   remote_user: test
   become_method: sudo
   gather_facts: no
+  vars_files:
+  - files/awscreds.yml
   tasks:
   - name: Take a snapshot of the running instance root volume
     ec2_snapshot:
