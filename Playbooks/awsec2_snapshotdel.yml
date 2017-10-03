@@ -12,7 +12,7 @@
       aws_access_key: “{{ aws_id }}”
       aws_secret_key: “{{ aws_key }}”
       region: '{{ aws_region }}'
-             snapshot_id: paste the copied snapshot Id
-             state:  absent
-             wait:  no
-          register: snapshot
+      snapshot_id: paste the copied snapshot Id
+      state: absent
+      wait: no
+    register: snapshot
