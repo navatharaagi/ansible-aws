@@ -20,3 +20,4 @@
       with_items:
       -  tmp1       #user tmp1
       -  tmp2       #user tmp2
+      #gives error because in our IAM “test” user only has permission i.e.,EC2Access. So detach that policy & attach “AdministratorAccess” 
