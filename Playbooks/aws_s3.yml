@@ -30,3 +30,4 @@
     debug:  var=create_bucket
   - name:  Output of copy
     debug:  var=copy_files
+#S3 console,”ansiblebucket2”bucket,”Playbooks" folder, “aws_iam.yml” file will be created.
