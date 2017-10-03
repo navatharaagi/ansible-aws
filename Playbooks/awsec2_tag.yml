@@ -15,5 +15,5 @@
       resource: Paste the copied volume id
       state: present
       tags:
-      Name: data_volume
+        Name: data_volume
     register:  voltags
