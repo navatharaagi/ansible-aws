@@ -12,8 +12,9 @@
       aws_access_key: “{{ aws_id }}”
       aws_secret_key: “{{ aws_key }}”
       region: '{{aws_region }}'
-      resource: Paste the copied volume id
+      resource: Paste the copied volumeid
       state: present
       tags:
         Name: data_volume
     register:  voltags
+/*to tag snapshot,instance,SG,…give their ids in resource instead of volumeid .
