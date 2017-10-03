@@ -10,16 +10,16 @@
   - name: Basic Security Group Creation
     ec2_group:
       region: '{{ aws_region }}'
-      name:  MyTestLinuxAcademyGroup
-      description:  This is the EC2_Group Demo
-      vpc_id: Paste the copied VPCID od our instance
+      name: MyTestLinuxAcademyGroup
+      description: This is the EC2_Group Demo
+      vpc_id: Paste the copied VPCID of our instance
       rules:
       - proto: tcp
-        from_port:  80
-        to_port:  80
-        cidr_ip: 0.0.0.0/0
-        rules_egress:
-      - proto:  tcp
         from_port: 80
-        to_port:  80
-        cidr_ip:  0.0.0.0/0
+        to_port: 80
+        cidr_ip: 0.0.0.0/0
+      rules_egress:
+      - proto: tcp
+        from_port: 80
+        to_port: 80
+        cidr_ip: 0.0.0.0/0
