@@ -7,11 +7,7 @@
   tasks:
   - name: Label an existing volume so we know what it is
     ec2_tags:
-      aws_access_key: “{{ aws_id }}”
-      aws_secret_key: “{{ aws_key }}”
-      region: '{{aws_region }}'
-      resource: Paste the copied volumeid
       state: present
       tags:
         Name: data_volume
-    register:  voltags
+    register: voltags
