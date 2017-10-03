@@ -1,0 +1,18 @@
+--- # EC2 VOL MODULE EXAMPLE
+- hosts: localhost
+  connection: local
+  remote_user: test
+  become_method: sudo
+  gather_facts: no
+  vars_files:
+  - files/awscreds.yml
+  tasks:
+  - name: Create a new volume & attach to running instance
+    ec2_vol:
+      aws_access_key:  “{{ aws_id }}”
+      aws_secret_key:  “{{ aws_key }}”
+      region:  '{{aws_region }}'
+      instance: copy & paste instance id from EC2
+      volume_size: 1             /*default it will be GB
+      device_name: sde      /*doesnot matter whether it is dev/sde or sdw
+    register: volume_result
