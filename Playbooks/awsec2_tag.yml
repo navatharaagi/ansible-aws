@@ -7,7 +7,7 @@
   vars_files:
   - files/awscreds.yml
   tasks:
-  - name: Label an existing volume so we know what it is
+  - name:  Create a Basic VPC using the 10.x.x.x  Private network range
     ec2_tags:
       aws_access_key:  “{{ aws_id }}”
       aws_secret_key:  “{{ aws_key }}”
