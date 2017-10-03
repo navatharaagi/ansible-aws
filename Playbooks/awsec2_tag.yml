@@ -4,8 +4,6 @@
   remote_user: test
   become_method: sudo
   gather_facts: no
-  vars_files:
-  - files/awscreds.yml
   tasks:
   - name: Label an existing volume so we know what it is
     ec2_tags:
