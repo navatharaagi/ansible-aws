@@ -16,4 +16,4 @@
       state: present
       tags:
         Name: data_volume
-    register: voltags  #to tag snapshot,instance,SG,… just give respective ids in resource, instead of volume id.
+    register: voltags  #to tag snapshot,instance,SG,… just give respective ids in resource, instead of volume id. Check there is some syntax error in 10th line
