@@ -8,7 +8,7 @@
   - files/awscreds.yml
   tasks:
   - name: Label an existing volume so we know what it is
-    ec2_tags:
+    ec2_tag:
       aws_access_key:  “{{ aws_id }}”
       aws_secret_key:  “{{ aws_key }}”
       region:  “{{aws_region }}”
