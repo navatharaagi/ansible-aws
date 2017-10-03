@@ -16,4 +16,4 @@
         vpc_id:  paste copied vpc from the o/p    #to get vpcs info in one place
     register:  vpcnetfacts
   - name: Print out the facts
-    debug: var={{  vpcnetfacts.vpcs[0].id }}  /*facts in vpcs 1st element in array.id
+    debug: var={{  vpcnetfacts.vpcs[0].id }}  #facts in vpcs 1st element in array.id
