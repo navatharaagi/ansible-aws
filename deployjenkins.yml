@@ -11,7 +11,7 @@
    - name: Download Jenkins War
      get_url: url=http://mirrors.jenkins.io/war-stable/latest/jenkins.war dest=/usr/share/tomcat/webapps
 
-   - name: Start Tomcat
+   - name: ReStart Tomcat
      service: name=tomcat state=restarted enabled=yes
 
    - name: wait for tomcat to start

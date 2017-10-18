@@ -21,7 +21,7 @@
    - name: add user "tomcat"
      user: name=tomcat group=tomcat home=/usr/share/tomcat createhome=no
 
-   - name: download Java jdk 8
+   - name: Download Java jdk 8
      get_url: url=http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jre-8u151-linux-x64.rpm dest=/opt/jre-8u151-linux-x64.rpm
 
    - name: Download Tomcat
