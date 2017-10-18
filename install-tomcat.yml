@@ -36,11 +36,9 @@
      file: path=/usr/share/tomcat/ owner=tomcat group=tomcat state=directory recurse=yes
 
    - name: Install Tomcat init script
-     copy:
-       src: files/tomcatinitscript.sh
+     get_url:
+       url: https://raw.githubusercontent.com/ansible/ansible-examples/master/tomcat-standalone/roles/tomcat/files/tomcat-initscript.sh
        dest: /etc/init.d/tomcat
-       owner: tomcat
-       group: tomcat
        mode: 0755
 
    - name: Start Tomcat
