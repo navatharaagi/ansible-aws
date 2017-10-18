@@ -34,7 +34,7 @@
           from_port: 0
           to_port: 65535
           cidr_ip: 0.0.0.0/0
-  - name: Basic creation of t2.micro EC2 instance via ansible 
+  - name: Basic creation of t2.micro EC2 instance via ansible
     ec2:
       key_name: mykey
       instance_type: t2.micro
@@ -49,4 +49,3 @@
       state: present
     with_items:
       - tomcat
-  - name: Start Tomcat
