@@ -12,7 +12,7 @@
      java_archive: '{{ download_folder }}/jdk-8u5-linux-x64.tar.gz'
      ansible_ssh_private_key_file: '{{ ./mykey.pem }}'
      ansible_ssh_user: '{{ ec2-user }}'
-     http_port: 8080
+     http_port: '{{ 8080 }}'
 
    tasks:
    - name: Execute a shell command for listing the directory
