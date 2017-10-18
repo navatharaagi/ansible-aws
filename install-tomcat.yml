@@ -33,7 +33,7 @@
      command: "tar -zxf {{java_archive}} -C {{download_folder}} creates={{java_name}}"
 
    - name: Fix ownership
-     file: state=directory path={{java_name}} owner=root group=root recurse=yes
+     file: state=directory path={{java_name}} owner=tomcat group=tomcat recurse=yes
 
    - name: Download Tomcat
      get_url: url=http://download.nextag.com/apache/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz dest=/opt/apache-tomcat-8.5.23.tar.gz
