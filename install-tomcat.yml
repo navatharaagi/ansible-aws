@@ -37,7 +37,7 @@
 
    - name: Install Tomcat init script
      copy:
-       src: tomcatinitscript.sh
+       src: tomcatinitscript
        dest: /etc/init.d/tomcat
        owner: tomcat
        group: tomcat
