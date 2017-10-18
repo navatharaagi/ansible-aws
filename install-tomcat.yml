@@ -26,7 +26,7 @@
      get_url: url=http://download.oracle.com/otn-pub/java/jdk/8u5-b13/jdk-8u5-linux-x64.tar.gz dest=/opt/jdk-8u5-linux-x64.tar.gz
 
    - name: Unpack archive
-     command: "tar -zxf /opt/jdk-8u5-linux-x64.tar.gz -C /opt creates=/opt/jdk1.8.0_05"
+     command: chdir=/usr/share /bin/tar xvf /opt/jdk-8u5-linux-x64.tar.gz -C /opt/ creates=/opt/jdk-8u5-linux-x64.tar.gz
 
    - name: Fix ownership
      file: state=directory path={{java_name}} owner=tomcat group=tomcat recurse=yes
