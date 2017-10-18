@@ -1,0 +1,4 @@
+awscreds.yml
+*.retry
+*.pem
+.bashrc
