@@ -25,8 +25,8 @@
      yum: name=wget state=present
 
    - name: Download oracle-jdk8
-     shell: 'wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-          {{jdk_download_url}} -O /tmp/{{jdk_archive_file}}'
+     shell: wget --no-check-certificate --no-cookies - --header "Cookie: oraclelicense=accept-securebackup-cookie" \
+          {{jdk_download_url}} -O /tmp/{{jdk_archive_file}}
 
      args:
        creates: /tmp/{{jdk_archive_file}}
