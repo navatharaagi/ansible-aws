@@ -1,0 +1,16 @@
+--- # AWS EC2 Instance Communication Shell Command Example
+-  hosts: aws
+   remote_user: ec2-user
+   become_method: sudo
+   become: yes
+   gather_facts: yes
+   connection: ssh
+   vars_files:
+   - tomcat-vars.yml
+   tasks:
+   - name: Download Tomcat
+     get_url: url=http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.61/bin/apache-tomcat-7.0.61.tar.gz dest=/opt/apache-tomcat-7.0.61.tar.gz
+   - name: Start Tomcat
+     service: name=tomcat state=started enabled=yes
+   - name: wait for tomcat to start
+     wait_for: port={{http_port}}
