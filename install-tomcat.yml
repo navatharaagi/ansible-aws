@@ -14,11 +14,11 @@
      ansible_ssh_user: ec2-user
      http_port: 8080
 
-
    tasks:
    - name: Execute a shell command for listing the directory
      shell: ls -al ~
      register: result
+
    - name: display the results in JSON format
      debug: var=result
 
@@ -29,7 +29,7 @@
      user: name=tomcat group=tomcat home=/usr/share/tomcat createhome=no
 
    - name: Download Java
-    command: "wget -q -O {{java_archive}} --no-check-certificate --no-cookies --header 'Cookie: oraclelicense=accept-securebackup-cookie' {{download_url}} creates={{java_archive}}"
+     command: "wget -q -O {{java_archive}} --no-check-certificate --no-cookies --header 'Cookie: oraclelicense=accept-securebackup-cookie' {{download_url}} creates={{java_archive}}"
 
    - name: Unpack archive
      command: "tar -zxf {{java_archive}} -C {{download_folder}} creates={{java_name}}"
