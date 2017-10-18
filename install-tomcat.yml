@@ -26,7 +26,7 @@
      command: "wget -q -O /opt/jdk-8u5-linux-x64.tar.gz --no-check-certificate --no-cookies --header 'Cookie: oraclelicense=accept-securebackup-cookie' {{download_url}} creates=/opt/jdk-8u5-linux-x64.tar.gz"
 
    - name: Unpack archive
-     command: "tar -zxf {{java_archive}} -C {{download_folder}} creates={{java_name}}"
+     command: "tar -zxf /opt/jdk-8u5-linux-x64.tar.gz -C /opt creates=/opt/jdk1.8.0_05"
 
    - name: Fix ownership
      file: state=directory path={{java_name}} owner=tomcat group=tomcat recurse=yes
