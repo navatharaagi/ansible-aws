@@ -12,7 +12,7 @@
      get_url: url=http://mirrors.jenkins.io/war-stable/latest/jenkins.war dest=/usr/share/tomcat/webapps
 
    - name: Start Tomcat
-     service: name=tomcat state=started enabled=yes
-     
+     service: name=tomcat state=restarted enabled=yes
+
    - name: wait for tomcat to start
      wait_for: port={{http_port}}
