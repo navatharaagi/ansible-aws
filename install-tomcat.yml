@@ -22,7 +22,7 @@
      user: name=tomcat group=tomcat home=/usr/share/tomcat createhome=no
 
    - name: download Java
-     get_url: url=http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jre-8u151-linux-i586.tar.gz dest=/opt/jre-8u151-linux-i586.tar.gz
+     get_url: url=http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jre-8u151-linux-x64.rpm dest=/opt/jre-8u151-linux-x64.rpm
 
    - name: Extract java archive
      command: chdir=/usr/share /bin/tar xvf /opt/jre-8u151-linux-i586.tar.gz -C /opt/ creates=/opt/ajre-8u151-linux-i586
