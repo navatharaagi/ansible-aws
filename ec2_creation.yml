@@ -42,10 +42,3 @@
       region: '{{ aws_region }}'
       group: MySecurityGroup
       count: 1
-
-  - name: Install Tomcat
-    package:
-      name: '{{ item }}'
-      state: present
-    with_items:
-      - tomcat
