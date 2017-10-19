@@ -42,7 +42,7 @@
 
    - name: Configure Tomcat server
      get_url: url=https://raw.githubusercontent.com/ansible/ansible-examples/master/tomcat-standalone/roles/tomcat/templates/server.xml
-      dest: /usr/share/tomcat/conf/
+       dest: /usr/share/tomcat/conf/
 
    - name: Install Tomcat init script
      get_url:
