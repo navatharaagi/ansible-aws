@@ -22,11 +22,8 @@
    - name: add user "tomcat"
      user: name=tomcat group=tomcat home=/usr/share/tomcat createhome=no
 
-   - name: Download Java
-     get_url: url=http://download.oracle.com/otn-pub/java/jdk/8u5-b13/jdk-8u5-linux-x64.tar.gz dest=/opt/jdk-8u5-linux-x64.tar.gz
-
-   - name: Unpack archive
-     command: chdir=/usr/share /bin/tar xvf /opt/jdk-8u5-linux-x64.tar.gz -C /opt/ creates=/opt/jdk-8u5-linux-x64
+   - name: Install Java 1.7
+     yum: name=jdk-8u5-linux-x64 state=present
 
    - name: Download Tomcat
      get_url: url=http://download.nextag.com/apache/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz dest=/opt/apache-tomcat-8.5.23.tar.gz
