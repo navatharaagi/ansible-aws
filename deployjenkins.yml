@@ -9,7 +9,7 @@
    - tomcat-vars.yml
    tasks:
    - name: Download Jenkins War
-     get_url: url=http://mirrors.jenkins.io/war-stable/latest/jenkins.war dest=/usr/share/tomcat/webapps
+     get_url: http://mirrors.jenkins.io/war-stable/latest/jenkins.war
 
    - name: ReStart Tomcat
      service: name=tomcat state=restarted enabled=yes
