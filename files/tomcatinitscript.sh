@@ -20,7 +20,7 @@ export JAVA_HOME=/opt/oracle/jdk1.8.0_131
 
 #Add Java binary files to PATH
 #export PATH=$JAVA_HOME/bin:$PATH
-export PATH=$PATH:$JAVA_HOME/bin:/opt/oracle/jdk1.8.0_131/jre/bin
+export PATH=$PATH:/opt/oracle/jdk1.8.0_131/bin:/opt/oracle/jdk1.8.0_131/jre/bin
 
 
 #CATALINA_HOME is the location of the bin files of Tomcat
