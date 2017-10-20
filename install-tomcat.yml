@@ -31,7 +31,6 @@
      file: state=directory path={{java_name}} owner=root group=root recurse=yes
 
    - name: Make Java available for system by updating /usr/sbin/alternatives
-     ignore_errors: yes
      shell: |
       cat <<EOF
       /usr/sbin/alternatives --install /usr/bin/java java {{ java_name }}/bin/java 2000
