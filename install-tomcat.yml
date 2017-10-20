@@ -33,13 +33,12 @@
    - name: Make Java available for system by updating /usr/sbin/alternatives
      shell: |
       cat <<EOF
-      /usr/sbin/alternatives --install /usr/bin/java java /opt/oracle/jdk1.8.0_131/bin/java 2000
-      /usr/sbin/alternatives --install /usr/bin/jar jar /opt/oracle/jdk1.8.0_131/bin/jar 2
-      /usr/sbin/alternatives --install /usr/bin/javac javac /opt/oracle/jdk1.8.0_131/bin/javac 2
-      /usr/sbin/alternatives --set jar /opt/oracle/jdk1.8.0_131/bin/jar
-      /usr/sbin/alternatives --set javac /opt/oracle/jdk1.8.0_131/bin/javac
-      /usr/sbin/alternatives --set java /opt/oracle/jdk1.8.0_131/bin/java
-
+      /usr/sbin/alternatives --install /usr/bin/java java {{ java_name }}/bin/java 2000
+      /usr/sbin/alternatives --install /usr/bin/jar jar {{ java_name }}/bin/jar 2
+      /usr/sbin/alternatives --install /usr/bin/javac javac {{ java_name }}/bin/javac 2
+      /usr/sbin/alternatives --set jar {{ java_name }}/bin/jar
+      /usr/sbin/alternatives --set javac {{ java_name }}/bin/javac
+      /usr/sbin/alternatives --set java {{ java_name }}/bin/java
       EOF
 
    - name: add group "tomcat"
