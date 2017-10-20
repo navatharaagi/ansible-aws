@@ -30,13 +30,12 @@
    - name: Fix ownership
      file: state=directory path={{java_name}} owner=root group=root recurse=yes
 
-   - name: Make Java available for system by updating alternatives
-     become: yes
-     command: alternatives --install /usr/bin/java java {{ java_name }}/bin/java 2000
-     command: alternatives --install /usr/bin/jar jar {{ java_name }}/bin/jar 2
-     command: alternatives --install /usr/bin/javac javac {{ java_name }}/bin/javac 2
-     command: alternatives --set jar {{ java_name }}/bin/jar
-     command: alternatives --set javac {{ java_name }}/bin/javac
+   - name: Make Java available for system by updating /usr/sbin/alternatives
+     command: /usr/sbin/alternatives --install /usr/bin/java java {{ java_name }}/bin/java 2000
+     command: /usr/sbin/alternatives --install /usr/bin/jar jar {{ java_name }}/bin/jar 2
+     command: /usr/sbin/alternatives --install /usr/bin/javac javac {{ java_name }}/bin/javac 2
+     command: /usr/sbin/alternatives --set jar {{ java_name }}/bin/jar
+     command: /usr/sbin/alternatives --set javac {{ java_name }}/bin/javac
 
    - name: add group "tomcat"
      group: name=tomcat
