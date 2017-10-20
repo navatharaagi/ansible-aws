@@ -15,10 +15,13 @@
 #
 
 #Location of JAVA_HOME (bin files)
-export JAVA_HOME=/usr/lib/jvm/jre
+#export JAVA_HOME=/usr/lib/jvm/jre
+export JAVA_HOME={{ java_name }}
 
 #Add Java binary files to PATH
-export PATH=$JAVA_HOME/bin:$PATH
+#export PATH=$JAVA_HOME/bin:$PATH
+export PATH=$PATH:{{ java_name }}/bin:{{ java_name }}/jre/bin
+
 
 #CATALINA_HOME is the location of the bin files of Tomcat
 export CATALINA_HOME=/usr/share/tomcat
