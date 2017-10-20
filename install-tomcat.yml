@@ -22,11 +22,14 @@
    - name: add user "tomcat"
      user: name=tomcat group=tomcat home=/usr/share/tomcat createhome=no
 
-   - name: Install Java 1.8
-     get_url: url=http://download.oracle.com/otn-pub/java/jdk/8u5-b13/jdk-8u5-linux-x64.tar.gz dest=/opt/jdk-8u5-linux-x64.tar.gz
+   - name: Download Java
+     command: "wget -q -O {{java_archive}} --no-check-certificate --no-cookies --header 'Cookie: oraclelicense=accept-securebackup-cookie' {{download_url}} creates={{java_archive}}"
 
-   - name: Extract archive
-     command: chdir=/usr/share /bin/tar xvf /opt/jdk-8u5-linux-x64.tar.gz -C /opt/ creates=/opt/jdk-8u5-linux-x64.tar.gz
+   - name: Unpack archive
+     command: "tar -zxf {{java_archive}} -C {{download_folder}} creates={{java_name}}"
+
+   - name: Fix ownership
+     file: state=directory path={{java_name}} owner=root group=root recurse=yes
 
    - name: Download Tomcat
      get_url: url=http://download.nextag.com/apache/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz dest=/opt/apache-tomcat-8.5.23.tar.gz
