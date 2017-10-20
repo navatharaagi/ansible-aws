@@ -32,11 +32,12 @@
 
    - name: Make Java available for system by updating /usr/sbin/alternatives
      ignore_errors: yes
-     command: /usr/sbin/alternatives --install /usr/bin/java java {{ java_name }}/bin/java 2000
-     command: /usr/sbin/alternatives --install /usr/bin/jar jar {{ java_name }}/bin/jar 2
-     command: /usr/sbin/alternatives --install /usr/bin/javac javac {{ java_name }}/bin/javac 2
-     command: /usr/sbin/alternatives --set jar {{ java_name }}/bin/jar
-     command: /usr/sbin/alternatives --set javac {{ java_name }}/bin/javac
+     shell: |
+      /usr/sbin/alternatives --install /usr/bin/java java {{ java_name }}/bin/java 2000
+      /usr/sbin/alternatives --install /usr/bin/jar jar {{ java_name }}/bin/jar 2
+      /usr/sbin/alternatives --install /usr/bin/javac javac {{ java_name }}/bin/javac 2
+      /usr/sbin/alternatives --set jar {{ java_name }}/bin/jar
+      /usr/sbin/alternatives --set javac {{ java_name }}/bin/javac
 
    - name: add group "tomcat"
      group: name=tomcat
