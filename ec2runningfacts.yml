@@ -48,7 +48,7 @@
       count: 2
   - name: gathering remote facts of running intances
     ec2_remote_facts:
-        region: '{{ aws_region }}'
-         filters:
-           instance-state-name: running
-           "tag:Name": Example
+      region: '{{ aws_region }}'
+        filters:
+          instance-state-name: running
+          "tag:Name": Example
