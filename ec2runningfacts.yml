@@ -46,7 +46,7 @@
       region: '{{ aws_region }}'
       group: MySecurityGroup
       count: 2
-  - name: gathering remote facts of running intances
+  - name: gathering remote ec2 facts of running intances
     ec2_remote_facts:
       region: '{{ aws_region }}'
       filters:
