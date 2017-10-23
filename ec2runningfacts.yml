@@ -50,4 +50,5 @@
     ec2_remote_facts:
      filters:
       instance-state-name: running
+      region: '{{ aws_region }}'
       "tag:Name": Example
