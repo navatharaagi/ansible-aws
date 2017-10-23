@@ -46,7 +46,8 @@
       region: '{{ aws_region }}'
       group: MySecurityGroup
       count: 3
-  - name: Gather the EC2 Facts about running instances
-    action: ec2_facts
-  - name: Display the instance type
-    debug: msg= ‘{{ ansible_ec2_instance_type }}’
+  - name: listing of running intances
+    ec2_remote_facts:
+     filters:
+      instance-state-name: running
+      "tag:Name": Example
