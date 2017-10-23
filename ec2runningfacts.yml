@@ -1,4 +1,4 @@
---- # EC2 Running facts listing module
+--- # EC2 Running facts listing module remotely
 - hosts: local
   connection: local
   remote_user: class
@@ -46,7 +46,7 @@
       region: '{{ aws_region }}'
       group: MySecurityGroup
       count: 3
-  - name: listing of running intances
+  - name: gathering remote facts of running intances
     ec2_remote_facts:
      filters:
       instance-state-name: running
