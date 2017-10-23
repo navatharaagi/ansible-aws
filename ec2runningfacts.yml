@@ -1,4 +1,4 @@
---- # EC2 Running facts listing module remotely
+--- # EC2 Facts Running Remotely facts listing module 
 - hosts: local
   connection: local
   remote_user: class
