@@ -45,4 +45,8 @@
       image: ami-02eada62
       region: '{{ aws_region }}'
       group: MySecurityGroup
-      count: 1
+      count: 3
+  - name: Gather the EC2 Facts about running instances
+    action: ec2_facts
+  - name: Display the instance type
+    debug: msg=‘{{ ansible_ec2_instance_type }}’
