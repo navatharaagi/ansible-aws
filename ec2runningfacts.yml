@@ -3,7 +3,7 @@
   connection: local
   remote_user: class
   become_method: sudo
-  gather_facts: no
+  gather_facts: yes
   vars_files:
   - awscreds.yml
   - tomcat-vars.yml
