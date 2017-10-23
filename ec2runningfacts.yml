@@ -49,4 +49,4 @@
   - name: Gather the EC2 Facts about running instances
     action: ec2_facts
   - name: Display the instance type
-    debug: msg=‘{{ ansible_ec2_instance_type }}’
+    debug: msg= ‘{{ ansible_ec2_instance_type }}’
