@@ -16,4 +16,4 @@
     register: ec2_facts
   - name: Debug
     debug:
-     msg: '{{ ec2_facts }}'
+      msg: '{{ ec2_facts }}'
