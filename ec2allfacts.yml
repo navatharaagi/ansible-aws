@@ -10,10 +10,10 @@
   tasks:
   - name: Gathering remote facts of all ec2 instances
     ec2_remote_facts:
-    region: '{{ aws_region }}'
-      filters:
+     region: '{{ aws_region }}'
+     filters:
         vpc-id: vpc-7e0d761a
     register: ec2_facts
   - name: Debug
     debug:
-      msg: '{{ ec2_facts }}'    
+      msg: '{{ ec2_facts }}'
