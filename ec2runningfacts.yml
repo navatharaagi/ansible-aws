@@ -1,0 +1,48 @@
+--- # EC2 Running facts listing module
+- hosts: local
+  connection: local
+  remote_user: class
+  become_method: sudo
+  gather_facts: no
+  vars_files:
+  - awscreds.yml
+  - tomcat-vars.yml
+  tasks:
+  -  name: Basic Security Group Creation
+     ec2_group:
+        region: '{{ aws_region }}'
+        name:  MySecurityGroup
+        description:  This is the EC2_Security Group
+        vpc_id: vpc-7e0d761a
+        state: present
+        rules:
+        - proto: tcp
+          from_port: 80
+          to_port: 80
+          cidr_ip: 0.0.0.0/0
+        - proto: tcp
+          from_port: 22
+          to_port: 22
+          cidr_ip: 0.0.0.0/0
+      # open tomcat to the world
+        - proto: tcp
+          from_port: 8080
+          to_port: 8080
+          cidr_ip: 0.0.0.0/0
+        - proto: tcp
+          from_port: 8888
+          to_port: 8888
+          cidr_ip: 0.0.0.0/0
+        rules_egress:
+        - proto: all
+          from_port: 0
+          to_port: 65535
+          cidr_ip: 0.0.0.0/0
+  - name: Basic creation of t2.micro EC2 instance via ansible
+    ec2:
+      key_name: mykey
+      instance_type: t2.micro
+      image: ami-02eada62
+      region: '{{ aws_region }}'
+      group: MySecurityGroup
+      count: 1
