@@ -1,0 +1,16 @@
+--- # All EC2 Remote Facts list module
+- hosts: local
+  connection: local
+  remote_user: ec2-user
+  become_method: sudo
+  gather_facts: yes
+  vars_files:
+  - tomcat-vars.yml
+  - awscreds.yml
+  tasks:
+  - name: Gathering remote facts of all ec2 instances
+    ec2_remote_facts:
+    region: '{{ aws_region }}'
+      filters:
+        vpc-id: vpc-7e0d761a
+        
