@@ -51,6 +51,8 @@
       region: '{{ aws_region }}'
       filters:
           instance-state-name: running
+    register: ec2_facts
+
   - name: Debug
     debug:
-     msg: '{{ ec2_remote_facts }}'
+     msg: '{{ ec2_facts }}'
