@@ -45,7 +45,7 @@
       image: ami-02eada62
       region: '{{ aws_region }}'
       group: MySecurityGroup
-      count: 3
+      count: 2
   - name: gathering remote facts of running intances
     ec2_remote_facts:
      filters:
