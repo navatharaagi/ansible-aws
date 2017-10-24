@@ -46,4 +46,3 @@
       region: '{{ aws_region }}'
       group: MySecurityGroup
       count: 1
-      "tag:name": runningfact 
