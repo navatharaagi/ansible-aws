@@ -10,7 +10,7 @@
      region: '{{ aws_region }}'
      filters:
         vpc-id: vpc-7e0d761a
-        state: absent
+        state: stopped
     register: ec2_facts
   - name: Debug
     debug:
