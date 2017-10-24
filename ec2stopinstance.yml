@@ -6,7 +6,7 @@
     - awscreds.yml
   tasks:
   - name: Gather EC2 facts
-    local_action: ec2_facts
+    local_action: ec2_remote_facts
 
   - name: hostvars
     debug:
