@@ -15,8 +15,5 @@
       count: 0
       instance_tags:
         Name: runningfact
-      volumes:
-       - device_name: /dev/xvda
-         volume_size: 100
-         delete_on_termination: yes
+      state: absent  
   # debug that output, which gives all ec2 detailed information
