@@ -5,19 +5,17 @@
   vars_files:
     - awscreds.yml
   tasks:
-  - name: stop running ec2 instances
-    ec2_remote_facts:
-      region: '{{ aws_region }}'
-    register: ec2_facts
-  - name: Terminate instances
-    ec2:
-      state: 'absent'
-      region: '{{ aws_region }}'
-      wait: True
-      vpc-id: vpc-7e0d761a
-  - name: Debug
-    debug:
-        msg: '{{ ec2_facts }}'
+  - name: Gather EC2 facts
+    local_action: ec2_facts
 
+  - debug: var=hostvars[inventory_hostname]
+  - debug: msg="{{ hostvars[inventory_hostname]['ec2_id'] }}"
+
+  - name: Terminate instances
+    local_action: ec2
+        state: 'absent'
+        instance_ids: '{{ ec2_id }}'
+        region: '{{ aws_region }}'
+        wait: True
         #vpc_subnet_id: subnet-29e63245
   # debug that output, which gives all ec2 detailed information
