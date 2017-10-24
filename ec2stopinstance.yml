@@ -15,4 +15,4 @@
       instance_tags:
         Name: runningfact
       state: stopped
-  # debug that output, which gives all ec2 detailed information
+      vpc_subnet_id: vpc-7e0d761a
