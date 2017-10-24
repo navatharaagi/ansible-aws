@@ -15,4 +15,4 @@
       instance_tags:
         Name: runningfact
       state: stopped
-      vpc_subnet_id: vpc-7e0d761a
+      vpc_subnet_id: subnet-b7d1f9ef
