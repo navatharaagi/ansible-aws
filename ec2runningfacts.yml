@@ -20,4 +20,4 @@
       msg: "Instance: {{ item.0 }} has IP address: {{ item.1 }}"
     with_together:
       - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'running')|map(attribute='instance_id')|list }}"
-      - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'running')|map(attribute='private_ip_address')|list }}"
+      - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'running')|map(attribute='public_dns_name')|list }}"
