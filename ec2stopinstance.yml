@@ -7,6 +7,8 @@
   tasks:
   - name: Gather facts
     action: ec2_remote_facts
+    region: '{{ aws_region }}'
+
 
   - name: Stop  instance
     local_action:
