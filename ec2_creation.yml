@@ -47,4 +47,4 @@
       group: MySecurityGroup
       count: 1
       instance_tags:
-        Name: '{{ runningfact }}'
+        Name: runningfact 
