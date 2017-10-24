@@ -21,7 +21,7 @@
     with_together:
      - "{{ ec2_facts.instances|map(attribute='id')|list }}"
      - "{{ ec2_facts.instances|map(attribute='state')|list }}"
-     - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'stopped')|map(attribute='id')|list }}"
+     - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'running')|map(attribute='stopped')|list }}"
 
         #vpc_subnet_id: subnet-29e63245
   # debug that output, which gives all ec2 detailed information
