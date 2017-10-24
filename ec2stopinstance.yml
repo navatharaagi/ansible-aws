@@ -1,25 +1,22 @@
 --- # EC2 Remote Facts Running list module
 - hosts: local
   connection: local
-  remote_user: ec2-user
   gather_facts: no
   vars_files:
     - awscreds.yml
   tasks:
-  - name: Gathering remote facts of all ec2 instances
-    ec2_remote_facts:
-     region: '{{ aws_region }}'
-     filters:
-        vpc-id: vpc-7e0d761a
-    register: ec2_facts
-  #debug that output
-  - name: Debug
-    debug:
-      msg: '{{ ec2_facts }}'
-  - name: Get all instances to stop
+  - name: Basic creation of t2.micro EC2 instance via ansible
     ec2:
-     instance_ids: '{{ ec2_facts.instances }}'
-     region: '{{ aws_region }}'
-
-        #vpc_subnet_id: subnet-29e63245
+      key_name: mykey
+      instance_type: t2.micro
+      image: ami-02eada62
+      region: '{{ aws_region }}'
+      group: MySecurityGroup
+      count: 0
+      instance_tags:
+        Name: runningfact
+      volumes:
+       - device_name: /dev/xvda
+         volume_size: 100
+         delete_on_termination: truenet_id: subnet-29e63245
   # debug that output, which gives all ec2 detailed information
