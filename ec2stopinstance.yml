@@ -16,6 +16,7 @@
     debug:
       msg: '{{ ec2_facts }}'
   - name: Get all instances to stop
+    ec2:
     instance_ids: '{{ ec2_facts.instances }}'
 
         #vpc_subnet_id: subnet-29e63245
