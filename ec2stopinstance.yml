@@ -8,9 +8,9 @@
   - name: stop running ec2 instances
     ec2_remote_facts:
      region: '{{ aws_region }}'
-     state: absent
      filters:
         vpc-id: vpc-7e0d761a
+        state: absent
     register: ec2_facts
   - name: Debug
     debug:
