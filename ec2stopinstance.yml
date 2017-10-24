@@ -5,8 +5,12 @@
   vars_files:
     - awscreds.yml
   tasks:
-  - name: Gather EC2 facts
-    local_action: ec2_remote_facts
+  - name: gathering remote ec2 facts of running intances
+    ec2_remote_facts:
+      region: '{{ aws_region }}'
+      filters:
+          instance-state-name: stopped
+    register: ec2_facts
 
   - name: hostvars
     debug:
