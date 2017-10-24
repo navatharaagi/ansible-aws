@@ -7,10 +7,14 @@
   tasks:
   - name: stop running ec2 instances
     ec2_remote_facts:
-     region: '{{ aws_region }}'
-     filters:
-        vpc-id: vpc-7e0d761a
     register: ec2_facts
+  - name: Terminate instances
+    ec2:
+      state: 'absent'
+      instance_ids: '{{ ec2_id }}'
+      region: '{{ aws_region }}'
+      wait: True
+      vpc-id: vpc-7e0d761a
   - name: Debug
     debug:
         msg: '{{ ec2_facts }}'
