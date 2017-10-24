@@ -12,7 +12,7 @@
   - name: Terminate instances
     ec2:
      state: absent
-     instance_ids: '{{ instance_ids }}'
+     vpc-id: vpc-7e0d761a
      region: '{{ aws_region }}'
      wait: True
         #vpc_subnet_id: subnet-29e63245
