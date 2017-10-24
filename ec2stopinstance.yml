@@ -13,6 +13,7 @@
   - name: Stop  instance
     ec2:
         region: '{{ aws_region }}'
+        instance_type: t2.micro
         instance_ids: '{{ ansible_ec2_instance_id }}'
         state: stopped
         wait: no
