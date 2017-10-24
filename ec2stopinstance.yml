@@ -6,8 +6,8 @@
     - awscreds.yml
   tasks:
   - name: Gather facts
-    action: ec2_remote_facts
-    region: '{{ aws_region }}'
+    ec2_remote_facts:
+     region: '{{ aws_region }}'
 
 
   - name: Stop  instance
