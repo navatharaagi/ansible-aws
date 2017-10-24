@@ -12,6 +12,9 @@
           instance-state-name: running
     register: ec2_facts
   # debug that output
+  - name: Debug
+    debug:
+      msg: '{{ ec2_facts }}'
   - name: Get only running instance IP addresses.
     debug:
       msg: "Instance: {{ item.0 }} has IP address: {{ item.1 }}"
