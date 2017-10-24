@@ -10,6 +10,7 @@
       region: '{{ aws_region }}'
       filters:
           instance-state-name: running
+          "tag:name": runningfact 
     register: ec2_facts
   # debug that output
   - name: Get only running instance IP addresses.
