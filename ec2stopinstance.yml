@@ -15,3 +15,6 @@
         #instance_ids: '{{ ansible_ec2_instance_id }}'
         state: stopped
         wait: no
+        count_tag:
+           Type: "{{ item.key }}"
+        exact_count: "{{ item.value.count }}"
