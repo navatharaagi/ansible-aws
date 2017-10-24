@@ -1,0 +1,9 @@
+--- # EC2 Remote Facts Running list module
+- hosts: local
+  connection: local
+  gather_facts: yes
+  vars_files:
+    - awscreds.yml
+  tasks:
+  - name: stop running ec2 instances
+  
