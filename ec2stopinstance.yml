@@ -11,7 +11,7 @@
   - name: hostvars
     debug:
      var: hostvars[inventory_hostname]
-  - name: ec2_id
+  - name: ec2 id
     debug:
      msg: "{{ hostvars[inventory_hostname]['ec2_id'] }}"
   - name: Terminate instances
