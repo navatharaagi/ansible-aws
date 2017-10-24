@@ -10,7 +10,7 @@
      region: '{{ aws_region }}'
   # just show the instance-id
   - debug:
-     msg: "{{ hostvars[inventory_hostname]['ec2_remote_facts'] }}"
+     msg: "{{ hostvars[inventory_hostname]['ids']}}"
   - name: destroy all instances
     ec2:
       state: 'absent'
