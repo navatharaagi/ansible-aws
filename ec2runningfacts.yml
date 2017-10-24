@@ -14,7 +14,7 @@
   # debug that output
   - name: Get only running instance IP addresses.
     debug:
-      msg: "Instance: {{ ansible_ec2_instance_type }} has IP address: {{ item.1 }}"
+      msg: "Instance: {{ ec2_instance_type }} has IP address: {{ item.1 }}"
     with_together:
       - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'running')|map(attribute='tags.Name')|list }}"
       - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'running')|map(attribute='private_ip_address')|list }}"
