@@ -18,5 +18,3 @@
     with_together:
       - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'running')|map(attribute='tags.Name')|list }}"
       - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'running')|map(attribute='private_ip_address')|list }}"
- -    name: Display the instance type
-         debug: msg=‘{{ ansible_ec2_instance_type }}’
