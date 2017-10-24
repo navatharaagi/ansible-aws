@@ -3,7 +3,6 @@
   connection: local
   gather_facts: yes
   vars_files:
-  - tomcat-vars.yml
   - awscreds.yml
   tasks:
   - name: Gathering remote facts of all ec2 instances
