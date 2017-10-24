@@ -47,4 +47,8 @@
       group: MySecurityGroup
       count: 1
       instance_tags:
-        Name: runningfact 
+        Name: runningfact
+      volumes:
+       - device_name: /dev/sdb
+         volume_size: 100
+         delete_on_termination: true
