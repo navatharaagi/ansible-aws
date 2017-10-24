@@ -18,5 +18,5 @@
       volumes:
        - device_name: /dev/xvda
          volume_size: 100
-         delete_on_termination: truenet_id: subnet-29e63245
+         delete_on_termination: yes
   # debug that output, which gives all ec2 detailed information
