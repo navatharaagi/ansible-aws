@@ -6,4 +6,12 @@
     - awscreds.yml
   tasks:
   - name: stop running ec2 instances
-  
+    ec2_remote_facts:
+      region: '{{ aws_region }}'
+      filters:
+        instance-state-name: stop
+    register: ec2_facts
+  # debug that output, which gives all ec2 detailed information
+  - name: Debug
+    debug:
+      msg: '{{ ec2_facts }}'
