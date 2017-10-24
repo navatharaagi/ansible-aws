@@ -8,13 +8,13 @@
   - name: Gather facts
     ec2_remote_facts:
      region: '{{ aws_region }}'
-  - name: Stop  instance
+  # just show the instance-id
+  - debug:
+     msg: "{{ hostvars[inventory_hostname]['ansible_ec2_instance_id'] }}"
+  - name: destroy all instances
     ec2:
-        region: '{{ aws_region }}'
-        instance_type: t2.micro
-        #instance_ids: '{{ ansible_ec2_instance_id }}'
-        state: stopped
-        wait: no
-        count_tag:
-           Type: "{{ item.key }}"
-        exact_count: "{{ item.value.count }}"
+      state: 'absent'
+      region: '{{ aws_region }}'
+      instance_ids: '{{ item }}'
+      wait: true
+      with_items: hostvars[inventory_hostname]['ansible_ec2_instance_id']
