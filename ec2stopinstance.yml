@@ -8,8 +8,6 @@
   - name: Gather facts
     ec2_remote_facts:
      region: '{{ aws_region }}'
-
-
   - name: Stop  instance
     ec2:
         region: '{{ aws_region }}'
