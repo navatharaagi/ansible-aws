@@ -10,10 +10,10 @@
 
   - name: hostvars
     debug:
-    var: hostvars[inventory_hostname]
+     var: hostvars[inventory_hostname]
   - name: ec2_id
     debug:
-    msg: "{{ hostvars[inventory_hostname]['ec2_id'] }}"
+     msg: "{{ hostvars[inventory_hostname]['ec2_id'] }}"
 
   - name: Terminate instances
     ec2:
