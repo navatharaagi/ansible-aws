@@ -49,6 +49,6 @@
       instance_tags:
         Name: runningfact
       volumes:
-       - device_name: /dev/sdb
+       - device_name: /dev/xvda
          volume_size: 100
          delete_on_termination: true
