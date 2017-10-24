@@ -21,3 +21,4 @@
     with_together:
       - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'running')|map(attribute='id')|list }}"
       - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'running')|map(attribute='public_ip_address')|list }}"
+      - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'running')|map(attribute='tags.name')|list }}"
