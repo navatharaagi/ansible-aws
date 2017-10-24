@@ -11,7 +11,7 @@
     register: ec2_facts
   - name: Terminate instances
     ec2:
-     state: absent
+     state: stopped
      vpc_subnet_id: subnet-b7d1f9ef
      region: '{{ aws_region }}'
      wait: True
