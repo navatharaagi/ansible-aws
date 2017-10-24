@@ -10,6 +10,6 @@
         region: '{{ aws_region }}'
         state: absent
         vpc-id: vpc-7e0d761a
-        instance_ids: '{{ ansible_ec2_instance_id }}'
+        instance_ids: '{{ ec2_instance_id }}'
         #vpc_subnet_id: subnet-29e63245
   # debug that output, which gives all ec2 detailed information
