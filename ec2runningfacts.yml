@@ -1,8 +1,6 @@
 --- # EC2 Remote Facts Running list module
 - hosts: local
   connection: local
-  remote_user: ec2-user
-  become_method: sudo
   gather_facts: yes
   vars_files:
   - awscreds.yml
