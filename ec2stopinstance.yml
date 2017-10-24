@@ -4,6 +4,7 @@
   gather_facts: no
   vars_files:
     - awscreds.yml
+    - instance_ids
   tasks:
   - name: gathering remote ec2 facts of running intances
     ec2_remote_facts:
@@ -12,7 +13,7 @@
   - name: Terminate instances
     ec2:
      state: stopped
-     vpc_subnet_id: subnet-b7d1f9ef
+     instance_ids: '{{ instance_ids }}'
      region: '{{ aws_region }}'
      wait: True
         #vpc_subnet_id: subnet-29e63245
