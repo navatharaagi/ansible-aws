@@ -6,7 +6,7 @@
     - awscreds.yml
   tasks:
   - name: Gather facts
-    action: ec2_facts
+    action: ec2_remote_facts
 
   - name: Stop  instance
     local_action:
