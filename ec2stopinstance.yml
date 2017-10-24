@@ -8,16 +8,7 @@
   - name: gathering remote ec2 facts of running intances
     ec2_remote_facts:
       region: '{{ aws_region }}'
-      filters:
-          instance-state-name: stopped
     register: ec2_facts
-
-  - name: hostvars
-    debug:
-     var: hostvars[inventory_hostname]
-  - name: ec2 id
-    debug:
-     msg: "{{ hostvars[inventory_hostname]['ec2_id'] }}"
   - name: Terminate instances
     ec2:
      state: absent
