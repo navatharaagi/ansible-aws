@@ -5,14 +5,12 @@
   vars_files:
     - awscreds.yml
   tasks:
-  - name: Basic creation of t2.micro EC2 instance via ansible
-    ec2:
-      key_name: mykey
-      instance_type: t2.micro
-      image: ami-02eada62
-      region: '{{ aws_region }}'
-      count: 0
-      instance_tags:
-        Name: runningfact
-      state: stopped
-      vpc_subnet_id: subnet-b7d1f9ef
+  - name: Gather facts
+    action: ec2_facts
+
+  - name: Stop  instance
+    local_action:
+        module: ec2
+        region: '{{ aws_region }}'
+        instance_ids: "{{ansible_ec2_instance_id}}"
+        state: stopped
