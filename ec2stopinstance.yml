@@ -17,7 +17,8 @@
       msg: '{{ ec2_facts }}'
   - name: Get all instances to stop
     ec2:
-    instance_ids: '{{ ec2_facts.instances }}'
+     instance_ids: '{{ ec2_facts.instances }}'
+     region: '{{ aws_region }}'
 
         #vpc_subnet_id: subnet-29e63245
   # debug that output, which gives all ec2 detailed information
