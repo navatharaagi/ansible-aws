@@ -13,7 +13,7 @@
 
   - name: Terminate instances
     local_action: ec2
-        state: 'absent'
+        state: absent
         instance_ids: '{{ ec2_id }}'
         region: '{{ aws_region }}'
         wait: True
