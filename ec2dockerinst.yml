@@ -31,9 +31,8 @@
         tag: latest
     - name: create a data container
       docker_container:
-        name: myredis
-        image: redis
-        command: redis-server --appendonly yes
-        state: present
+        name: mydata
+        image: navatharaagi/tomcatjdk8
+        state: started
         exposed_ports:
           - 8080
