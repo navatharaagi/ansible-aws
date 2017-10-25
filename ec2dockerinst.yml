@@ -36,3 +36,4 @@
         state: started
         exposed_ports:
           - 8080
+          
