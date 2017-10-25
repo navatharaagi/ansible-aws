@@ -23,7 +23,6 @@
       pip:
         name: "{{ item }}"
         state: latest
-        extra_args: "{{ pip_extra_args }}"
       with_items:
         - docker-py
     - name: Pull an image
