@@ -7,6 +7,4 @@
    connection: ssh
    vars_files:
     - tomcat-vars.yml
-
    tasks:
-     
