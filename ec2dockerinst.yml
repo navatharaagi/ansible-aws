@@ -31,4 +31,9 @@
         tag: latest
     - name: create a data container
       docker_container:
-        
+        name: myredis
+        image: redis
+        command: redis-server --appendonly yes
+        state: present
+        exposed_ports:
+          - 8080
