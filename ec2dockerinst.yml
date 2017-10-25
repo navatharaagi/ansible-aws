@@ -16,7 +16,8 @@
       - python-setuptools
       - docker
     - name: Install pypi
-      easy_install: name=pip
+      easy_install:
+        name: pip
 
     - name: Install docker-py to latest
       pip:
