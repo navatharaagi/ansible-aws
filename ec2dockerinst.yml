@@ -8,3 +8,15 @@
    vars_files:
     - tomcat-vars.yml
    tasks:
+     - name: Install python setuptools and docker
+  yum:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - python-setuptools
+    - docker
+
+- name: Start docker
+  service:
+    name: docker
+    state: running
