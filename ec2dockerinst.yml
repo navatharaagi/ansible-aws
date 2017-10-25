@@ -25,6 +25,7 @@
         state: latest
       with_items:
         - docker-py
+        
     - name: Pull an image
       docker_image:
         name: navatharaagi/tomcatjdk8
@@ -36,4 +37,3 @@
         state: started
         exposed_ports:
           - 8080
-          
