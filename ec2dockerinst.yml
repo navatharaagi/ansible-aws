@@ -15,7 +15,11 @@
       with_items:
       - python-setuptools
       - docker
-    - name: Start docker
-      service:
-        name: docker
-        state: started
+    - name: Pull an image
+      docker_image:
+        name: navatharaagi/tomcatjdk8
+        tag: latest
+
+
+
+    
