@@ -26,11 +26,15 @@
       with_items:
         - docker-py
 
+    - name: start docker
+      service:
+        state: started
+
     - name: Pull an image
       docker_image:
         name: navatharaagi/tomcatjdk8
         tag: latest
-        
+
     - name: create a data container
       docker_container:
         name: mydata
