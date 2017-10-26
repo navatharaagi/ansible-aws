@@ -28,6 +28,7 @@
 
     - name: start docker
       service:
+        name: docker
         state: started
 
     - name: Pull an image
