@@ -41,5 +41,6 @@
         name: tomcat8
         image: navatharaagi/tomcatjdk8
         state: present
+        recreate: yes
         ports:
           - "8080:8080"
