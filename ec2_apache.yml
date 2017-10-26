@@ -9,3 +9,6 @@
     - tomcat-vars.yml
    tasks:
    - name: install apache web server
+     yum:
+       pkg: httpd
+       state: latest
