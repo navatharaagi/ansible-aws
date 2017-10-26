@@ -41,7 +41,5 @@
         name: tomcat8
         image: navatharaagi/tomcatjdk8
         state: started
-        exposed_ports:
-          - 8080
         ports:
           - "8080:8080"
