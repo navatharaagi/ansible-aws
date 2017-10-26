@@ -42,7 +42,7 @@
         image: navatharaagi/tomcatjdk8
         state: started
         recreate: yes
-        ports:
+        published_ports:
           - "8080:8080"
         exposed_ports:
           - 8080
