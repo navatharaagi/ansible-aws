@@ -25,11 +25,12 @@
         state: latest
       with_items:
         - docker-py
-        
+
     - name: Pull an image
       docker_image:
         name: navatharaagi/tomcatjdk8
         tag: latest
+        
     - name: create a data container
       docker_container:
         name: mydata
