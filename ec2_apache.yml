@@ -3,10 +3,9 @@
    remote_user: ec2-user
    become_method: sudo
    become: true
-   gather_facts: yes
+   gather_facts: no
    connection: ssh
    vars_files:
     - tomcat-vars.yml
    tasks:
    - name: install apache web server
-   
