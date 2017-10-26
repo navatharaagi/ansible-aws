@@ -31,12 +31,12 @@
         name: docker
         state: started
 
-    - name: Pull an image
+    - name: Pull tomcat jdk 8  image
       docker_image:
         name: navatharaagi/tomcatjdk8
         tag: latest
 
-    - name: create a data container
+    - name: Start tomcat 8 container
       docker_container:
         name: tomcat8
         image: navatharaagi/tomcatjdk8
