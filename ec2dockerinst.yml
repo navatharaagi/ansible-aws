@@ -40,6 +40,6 @@
       docker_container:
         name: tomcat8
         image: navatharaagi/tomcatjdk8
-        state: started
+        state: present
         ports:
           - "8080:8080"
