@@ -2,4 +2,4 @@
 localhost ansible_connection=local ansible_python_interpreter=python
 
 [aws]
-ec2-13-57-29-72.us-west-1.compute.amazonaws.com
+ec2-54-219-170-105.us-west-1.compute.amazonaws.com
