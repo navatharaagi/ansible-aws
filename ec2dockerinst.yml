@@ -44,3 +44,5 @@
         recreate: yes
         ports:
           - "8080:8080"
+        exposed_ports:
+          - 8080
