@@ -12,4 +12,5 @@
      yum:
        pkg: httpd
        state: latest
-       
+   - name: start apache service
+   
