@@ -5,8 +5,6 @@
    become: true
    gather_facts: no
    connection: ssh
-   vars_files:
-    - tomcat-vars.yml
    tasks:
    - name: install apache web server
      yum:
