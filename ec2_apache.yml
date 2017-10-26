@@ -15,5 +15,5 @@
    - name: start apache service
      service:
        name: httpd
-       state: running
+       state: started
        enabled: yes
