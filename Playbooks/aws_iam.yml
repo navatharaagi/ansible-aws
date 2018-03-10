@@ -12,8 +12,8 @@
       aws_access_key:  “{{ aws_id }}”
       aws_secret_key:  “{{ aws_key }}”
       region:  “{{ aws_region }}”
-      iam_type:  user     #to create a user or group by giving type
-      name:  “{{  item  }}”       #item keyword variable
+      iam_type:  user     # to create a user or group by giving type
+      name:  “{{  item  }}”       # item keyword variable
       state:  present
       password:  “password”
       access_key_state:  create     /*to create access key
@@ -21,4 +21,4 @@
       -  tmp1      #user tmp1
       -  tmp2      #user tmp2
     # gives error because in our IAM “test” user only has permission i.e.,EC2Access. So detach that policy & attach “AdministratorAccess”
-    #In IAM,tmp1 & tmp2 will be created with some security credentials but not with access key
+    # In IAM,tmp1 & tmp2 will be created with some security credentials but not with access key
