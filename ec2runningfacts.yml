@@ -1,4 +1,4 @@
---- # EC2 Remote Facts Running list module
+--- # EC2 Remote  Facts Running list module
 - hosts: local
   connection: local
   gather_facts: yes
@@ -22,4 +22,3 @@
       - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'running')|map(attribute='id')|list }}"
       - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'running')|map(attribute='public_ip_address')|list }}"
       - "{{ ec2_facts.instances|selectattr('state', 'equalto', 'running')|map(attribute='tags.Name')|list }}"
-      
