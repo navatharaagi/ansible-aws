@@ -1,4 +1,4 @@
---- # install docker, pull images and run
+--- # install docker, pull  the images and run
 -  hosts: aws
    remote_user: ec2-user
    become_method: sudo
