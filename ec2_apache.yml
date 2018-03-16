@@ -1,4 +1,4 @@
---- # Apache Web server install and start service
+--- # Apache  Web server install and start service
 -  hosts: aws
    remote_user: ec2-user
    become_method: sudo
