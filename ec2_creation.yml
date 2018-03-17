@@ -1,4 +1,4 @@
---- # EC2 creation module
+--- # EC2  creation module
 - hosts: local
   connection: local
   remote_user: class
