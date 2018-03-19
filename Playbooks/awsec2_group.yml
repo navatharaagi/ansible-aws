@@ -1,4 +1,4 @@
---- # EC2_GROUP MODULE EXAMPLE
+--- # EC2_GROUP  MODULE EXAMPLE
 - hosts: local
   connection: local
   remote_user: test
