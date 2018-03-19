@@ -1,4 +1,4 @@
---- # EC2_AMI for creating a basic AMI template from an existing image
+--- # EC2_AMI  for creating a basic AMI template from an existing image
 - hosts: local
   connection: local
   become_method: sudo
@@ -6,7 +6,7 @@
   vars_files:
   - files/awscreds.yml
   tasks:
-  - name: More Advanced Provisioning of an AMI from our Instance in us region 
+  - name: More Advanced Provisioning of an AMI from our Instance in us region
     ec2_ami:
       region: '{{ aws_region }}'
       instance_id: i-0e985deea0b814a10
