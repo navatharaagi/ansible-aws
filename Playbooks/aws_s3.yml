@@ -3,7 +3,7 @@
   connection: local
   remote_user: test
   become_method: sudo
-  gather_facts: no     #since we are running on our own server “test"
+  gather_facts: no    #since we are running on our own server “test"
   vars_files:
   - files/awscreds.yml
   tasks:
@@ -22,7 +22,7 @@
       aws_secret_key:  “{{ aws_key }}”
       region:  “{{ aws_region }}”
       bucket: ansiblebucket2
-      object:  /Playbooks/aws_iam.yml  #give file which we want to copy
+      object:  /Playbooks/aws_iam.yml #give file which we want to copy
       src:  /home/test/Playbooks/aws_iam.yml
       mode: put
     register:  copy_files
