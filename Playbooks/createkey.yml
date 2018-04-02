@@ -1,4 +1,4 @@
---- # Gather  EC2 facts from my remote instances
+--- # Gather EC2 facts from my remote instances
 - hosts: local
   remote_user: test
   become_method: sudo
