@@ -1,4 +1,4 @@
---- # EC2_AMI  for creating a basic AMI  template from an existing image
+--- #EC2_AMI  for creating a basic AMI  template from an existing image
 - hosts: local
   connection: local
   become_method: sudo
