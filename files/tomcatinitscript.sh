@@ -7,7 +7,7 @@
 # Forked from: https://gist.github.com/valotas/1000094
 # @author: Miglen Evlogiev <bash@miglen.com>
 #
-# Release updates:
+#  Release updates:
 # Updated method for gathering pid of the current proccess
 # Added usage of CATALINA_BASE
 # Added coloring and additional status
@@ -51,7 +51,7 @@ start() {
     echo -e "\e[00;32mStarting tomcat\e[00m"
     #ulimit -n 100000
     #umask 007
-    # /bin/su -p -s /bin/sh tomcat
+    #/bin/su -p -s /bin/sh tomcat
         if [ `user_exists $TOMCAT_USER` = "1" ]
         then
                 su $TOMCAT_USER -c $CATALINA_HOME/bin/startup.sh
