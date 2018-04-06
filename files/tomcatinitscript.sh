@@ -11,7 +11,7 @@
 # Updated method for gathering pid of the current proccess
 # Added usage of CATALINA_BASE
 # Added coloring and additional status
-#  Added check for existence of the tomcat user
+# Added check for existence of the tomcat user
 #
 
 # Location of JAVA_HOME (bin files)
@@ -28,7 +28,7 @@ export CATALINA_HOME=/usr/share/tomcat
 # CATALINA_BASE is the location of the configuration files of this instance of Tomcat
 export CATALINA_BASE=/usr/share/tomcat
 
-#TOMCAT_USER is the default user of tomcat
+# TOMCAT_USER is the default user of tomcat
 export TOMCAT_USER=tomcat
 
 #TOMCAT_USAGE is the message if this script is called without any options
