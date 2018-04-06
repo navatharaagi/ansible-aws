@@ -31,10 +31,10 @@ export CATALINA_BASE=/usr/share/tomcat
 # TOMCAT_USER is the default user of tomcat
 export TOMCAT_USER=tomcat
 
-#TOMCAT_USAGE is the message if this script is called without any options
+# TOMCAT_USAGE is the message if this script is called without any options
 TOMCAT_USAGE="Usage: $0 {\e[00;32mstart\e[00m|\e[00;31mstop\e[00m|\e[00;32mstatus\e[00m|\e[00;31mrestart\e[00m}"
 
-#SHUTDOWN_WAIT is wait time in seconds for java proccess to stop
+# SHUTDOWN_WAIT is wait time in seconds for java proccess to stop
 SHUTDOWN_WAIT=20
 
 tomcat_pid() {
@@ -49,7 +49,7 @@ start() {
   else
     # Start tomcat
     echo -e "\e[00;32mStarting tomcat\e[00m"
-    #ulimit -n 100000
+    # ulimit -n 100000
     #umask 007
     #/bin/su -p -s /bin/sh tomcat
         if [ `user_exists $TOMCAT_USER` = "1" ]
