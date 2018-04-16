@@ -3,7 +3,7 @@
   connection: local
   remote_user: test
   become_method: sudo
-  gather_facts: no     # since we are running on our own server “test"
+  gather_facts: no    # since we are running on our own server “test"
   vars_files:
   - files/awscreds.yml
   tasks:
@@ -23,4 +23,4 @@
     register:  output
   - name:  Show the JSON Results
     debug:  var=output
-    #IAM Users,tmp1 & tmp2 will be created with security credentials with a Access Key, which can match with the access key in the o/p which have secret_access_key now
+    # IAM Users,tmp1 & tmp2 will be created with security credentials with a Access Key, which can match with the access key in the o/p which have secret_access_key now
