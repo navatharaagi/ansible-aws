@@ -5,7 +5,7 @@
 #
 # Tomcat 7 start/stop/status script
 # Forked from: https://gist.github.com/valotas/1000094
-# @author: Miglen Evlogiev <bash@miglen.com>
+#@author: Miglen Evlogiev <bash@miglen.com>
 #
 #Release updates:
 #Updated method for gathering pid of the current proccess
@@ -14,8 +14,8 @@
 #Added check for existence of the tomcat user
 #
 
-# Location of JAVA_HOME (bin files)
-# export JAVA_HOME=/usr/lib/jvm/jre
+#Location of JAVA_HOME (bin files)
+#export JAVA_HOME=/usr/lib/jvm/jre
 export JAVA_HOME=/opt/oracle/jdk1.8.0_131
 
 #Add Java binary files to PATH
