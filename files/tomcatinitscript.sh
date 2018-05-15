@@ -34,7 +34,7 @@ export TOMCAT_USER=tomcat
 #TOMCAT_USAGE is the message if this script is called without any options
 TOMCAT_USAGE="Usage: $0 {\e[00;32mstart\e[00m|\e[00;31mstop\e[00m|\e[00;32mstatus\e[00m|\e[00;31mrestart\e[00m}"
 
-# SHUTDOWN_WAIT is wait time in seconds for java proccess to stop
+#SHUTDOWN_WAIT is wait time in seconds for java proccess to stop
 SHUTDOWN_WAIT=20
 
 tomcat_pid() {
@@ -47,7 +47,7 @@ start() {
   then
     echo -e "\e[00;31mTomcat is already running (pid: $pid)\e[00m"
   else
-    #Start tomcat
+    # Start tomcat
     echo -e "\e[00;32mStarting tomcat\e[00m"
     #ulimit -n 100000
     #umask 007
