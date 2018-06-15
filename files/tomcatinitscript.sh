@@ -47,7 +47,7 @@ start() {
   then
     echo -e "\e[00;31mTomcat is already running (pid: $pid)\e[00m"
   else
-    #Start tomcat
+    # Start tomcat
     echo -e "\e[00;32mStarting tomcat\e[00m"
     #  ulimit -n 100000
     #  umask 007
@@ -75,7 +75,7 @@ stop() {
   if [ -n "$pid" ]
   then
     echo -e "\e[00;31mStoping Tomcat\e[00m"
-    # /bin/su -p -s /bin/sh tomcat
+    #  /bin/su -p -s /bin/sh tomcat
         sh $CATALINA_HOME/bin/shutdown.sh
 
     let kwait=$SHUTDOWN_WAIT
