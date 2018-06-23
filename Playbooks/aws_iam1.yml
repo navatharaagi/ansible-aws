@@ -16,7 +16,7 @@
       name:  “{{  item  }}”  # item keyword variable
       state:  present
       password:  “password”
-      access_key_state:  create   # to create access key
+      access_key_state:  create  # to create access key
     with_items:
       - tmp1     # user tmp1
       - tmp2     # user tmp2
