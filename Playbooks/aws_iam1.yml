@@ -18,8 +18,8 @@
       password:  “password”
       access_key_state:  create  # to create access key
     with_items:
-      - tmp1     # user tmp1
-      - tmp2     # user tmp2
+      - tmp1    # user tmp1
+      - tmp2    # user tmp2
     register:  output
   - name:  Show the JSON Results
     debug:  var=output
