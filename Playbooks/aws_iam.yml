@@ -1,4 +1,4 @@
---- #AWS IAM MODULE EXAMPLE
+--- # AWS IAM MODULE EXAMPLE
 - hosts : localhost
   connection: local
   remote_user: test
