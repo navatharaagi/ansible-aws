@@ -18,7 +18,7 @@
 # export JAVA_HOME=/usr/lib/jvm/jre
 export JAVA_HOME=/opt/oracle/jdk1.8.0_131
 
-# Add Java binary files to PATH
+#  Add Java binary files to PATH
 # export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:/opt/oracle/jdk1.8.0_131/bin:/opt/oracle/jdk1.8.0_131/jre/bin
 
@@ -34,7 +34,7 @@ export TOMCAT_USER=tomcat
 # TOMCAT_USAGE is the message if this script is called without any options
 TOMCAT_USAGE="Usage: $0 {\e[00;32mstart\e[00m|\e[00;31mstop\e[00m|\e[00;32mstatus\e[00m|\e[00;31mrestart\e[00m}"
 
-#  SHUTDOWN_WAIT is wait time in seconds for java proccess to stop
+# SHUTDOWN_WAIT is wait time in seconds for java proccess to stop
 SHUTDOWN_WAIT=20
 
 tomcat_pid() {
