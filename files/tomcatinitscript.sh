@@ -7,9 +7,9 @@
 # Forked from: https://gist.github.com/valotas/1000094
 # @author: Miglen Evlogiev <bash@miglen.com>
 #
-# Release updates:
-# Updated method for gathering pid of the current proccess
-# Added usage of CATALINA_BASE
+#  Release updates:
+#  Updated method for gathering pid of the current proccess
+#  Added usage of CATALINA_BASE
 #  Added coloring and additional status
 #  Added check for existence of the tomcat user
 #
