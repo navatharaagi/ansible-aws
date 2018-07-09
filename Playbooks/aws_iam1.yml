@@ -12,7 +12,7 @@
       aws_access_key:  “{{ aws_id }}”
       aws_secret_key:  “{{ aws_key }}”
       region:  “{{ aws_region }}”
-      iam_type:  user  #to create a user or group by giving type
+      iam_type:  user  # to create a user or group by giving type
       name:  “{{  item  }}”  #item keyword variable
       state:  present
       password:  “password”
