@@ -22,7 +22,7 @@
       aws_secret_key:  “{{ aws_key }}”
       region:  “{{ aws_region }}”
       bucket: ansiblebucket2
-      object:  /Playbooks/aws_iam.yml # give file which we want to copy
+      object:  /Playbooks/aws_iam.yml #give file which we want to copy
       src:  /home/test/Playbooks/aws_iam.yml
       mode: put
     register:  copy_files
@@ -30,4 +30,4 @@
     debug:  var=create_bucket
   - name:  Output of copy
     debug:  var=copy_files
-# S3console,”ansiblebucket2”bucket,”Playbooks" folder, “aws_iam.yml” file will be created.
+# S3 console,”ansiblebucket2”bucket,”Playbooks" folder, “aws_iam.yml” file will be created.
