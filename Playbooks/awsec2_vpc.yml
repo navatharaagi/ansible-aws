@@ -13,5 +13,5 @@
       aws_secret_key:  “{{ aws_key }}”
       region:  “{{aws_region }}”
       state: present
-      cidr_block: 10.2.1.0/24   # private ip, anything but starting with 10.
+      cidr_block: 10.2.1.0/24   #private ip, anything but starting with 10.
     register: vpcblock
