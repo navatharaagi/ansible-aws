@@ -1,4 +1,4 @@
---- # EC2_KEY MODULE Example
+--- #EC2_KEY MODULE Example
 - hosts:  local
   connection: local
   remote_user: test
@@ -11,4 +11,4 @@
      ec2_key:
         name: MyKeyPairTestAWS
         region: us-west-1
-        state: absent 
+        state: absent
