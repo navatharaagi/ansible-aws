@@ -22,7 +22,7 @@ export JAVA_HOME=/opt/oracle/jdk1.8.0_131
 # export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:/opt/oracle/jdk1.8.0_131/bin:/opt/oracle/jdk1.8.0_131/jre/bin
 
-#CATALINA_HOME is the location of the bin files of Tomcat
+# CATALINA_HOME is the location of the bin files of Tomcat
 export CATALINA_HOME=/usr/share/tomcat
 
 # CATALINA_BASE is the location of the configuration files of this instance of Tomcat
@@ -34,7 +34,7 @@ export TOMCAT_USER=tomcat
 # TOMCAT_USAGE is the message if this script is called without any options
 TOMCAT_USAGE="Usage: $0 {\e[00;32mstart\e[00m|\e[00;31mstop\e[00m|\e[00;32mstatus\e[00m|\e[00;31mrestart\e[00m}"
 
-# SHUTDOWN_WAIT is wait time in seconds for java proccess to stop
+#SHUTDOWN_WAIT is wait time in seconds for java proccess to stop
 SHUTDOWN_WAIT=20
 
 tomcat_pid() {
