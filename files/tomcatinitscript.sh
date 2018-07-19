@@ -11,7 +11,7 @@
 # Updated method for gathering pid of the current proccess
 # Added usage of CATALINA_BASE
 # Added coloring and additional status
-#  Added check for existence of the tomcat user
+# Added check for existence of the tomcat user
 #
 
 # Location of JAVA_HOME (bin files)
@@ -31,7 +31,7 @@ export CATALINA_BASE=/usr/share/tomcat
 # TOMCAT_USER is the default user of tomcat
 export TOMCAT_USER=tomcat
 
-#  TOMCAT_USAGE is the message if this script is called without any options
+# TOMCAT_USAGE is the message if this script is called without any options
 TOMCAT_USAGE="Usage: $0 {\e[00;32mstart\e[00m|\e[00;31mstop\e[00m|\e[00;32mstatus\e[00m|\e[00;31mrestart\e[00m}"
 
 # SHUTDOWN_WAIT is wait time in seconds for java proccess to stop
