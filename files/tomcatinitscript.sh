@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# chkconfig: 345 99 28
+#chkconfig: 345 99 28
 # description: Starts/Stops Apache Tomcat
 #
 # Tomcat 7 start/stop/status script
@@ -51,7 +51,7 @@ start() {
     echo -e "\e[00;32mStarting tomcat\e[00m"
     # ulimit -n 100000
     # umask 007
-    #  /bin/su -p -s /bin/sh tomcat
+    # /bin/su -p -s /bin/sh tomcat
         if [ `user_exists $TOMCAT_USER` = "1" ]
         then
                 su $TOMCAT_USER -c $CATALINA_HOME/bin/startup.sh
