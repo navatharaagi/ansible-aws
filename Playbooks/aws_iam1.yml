@@ -18,9 +18,9 @@
       password:  “password”
       access_key_state:  create  # to create access key
     with_items:
-      - tmp1    #user tmp1
-      - tmp2    #user tmp2
+      - tmp1    # user tmp1
+      - tmp2    # user tmp2
     register:  output
   - name:  Show the JSON Results
     debug:  var=output
-    #  IAM Users,tmp1 & tmp2 will be created with security credentials with a Access Key, which can match with the access key in the o/p which have secret_access_key now
+    # IAM Users,tmp1 & tmp2 will be created with security credentials with a Access Key, which can match with the access key in the o/p which have secret_access_key now
