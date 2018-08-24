@@ -1,4 +1,4 @@
---- # EC2 TAG MODULE EXAMPLE
+--- #EC2 TAG MODULE EXAMPLE
 - hosts: localhost
   connection: local
   remote_user: test
@@ -16,4 +16,4 @@
       state: present
       tags:
         Name: data_volume
-    register: voltags  #to tag snapshot,instance,SG,… just give respective ids in resource, instead of volume id. 
+    register: voltags  #to tag snapshot,instance,SG,… just give respective ids in resource, instead of volume id.
