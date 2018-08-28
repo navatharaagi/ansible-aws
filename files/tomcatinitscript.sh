@@ -10,15 +10,15 @@
 # Release updates:
 # Updated method for gathering pid of the current proccess
 # Added usage of CATALINA_BASE
-#Added coloring and additional status
-#Added check for existence of the tomcat user
+# Added coloring and additional status
+# Added check for existence of the tomcat user
 #
 
 # Location of JAVA_HOME (bin files)
 # export JAVA_HOME=/usr/lib/jvm/jre
 export JAVA_HOME=/opt/oracle/jdk1.8.0_131
 
-#Add Java binary files to PATH
+# Add Java binary files to PATH
 #export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:/opt/oracle/jdk1.8.0_131/bin:/opt/oracle/jdk1.8.0_131/jre/bin
 
