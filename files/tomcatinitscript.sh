@@ -19,7 +19,7 @@
 export JAVA_HOME=/opt/oracle/jdk1.8.0_131
 
 # Add Java binary files to PATH
-#  export PATH=$JAVA_HOME/bin:$PATH
+# export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:/opt/oracle/jdk1.8.0_131/bin:/opt/oracle/jdk1.8.0_131/jre/bin
 
 # CATALINA_HOME is the location of the bin files of Tomcat
@@ -49,7 +49,7 @@ start() {
   else
     # Start tomcat
     echo -e "\e[00;32mStarting tomcat\e[00m"
-    # ulimit -n 100000
+    #  ulimit -n 100000
     # umask 007
     # /bin/su -p -s /bin/sh tomcat
         if [ `user_exists $TOMCAT_USER` = "1" ]
