@@ -4,8 +4,8 @@
 #  description: Starts/Stops Apache Tomcat
 #
 #  Tomcat 7 start/stop/status script
-# Forked from: https://gist.github.com/valotas/1000094
-# @author: Miglen Evlogiev <bash@miglen.com>
+#  Forked from: https://gist.github.com/valotas/1000094
+#  @author: Miglen Evlogiev <bash@miglen.com>
 #
 # Release updates:
 # Updated method for gathering pid of the current proccess
@@ -47,7 +47,7 @@ start() {
   then
     echo -e "\e[00;31mTomcat is already running (pid: $pid)\e[00m"
   else
-    #  Start tomcat
+    # Start tomcat
     echo -e "\e[00;32mStarting tomcat\e[00m"
     #  ulimit -n 100000
     #  umask 007
