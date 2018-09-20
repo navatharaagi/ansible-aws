@@ -3,7 +3,7 @@
   connection: local
   remote_user: test
   become_method: sudo
-  gather_facts: no  #  since we are running on our own server “test"
+  gather_facts: no  #since we are running on our own server “test"
   vars_files:
   - files/awscreds.yml
   tasks:
