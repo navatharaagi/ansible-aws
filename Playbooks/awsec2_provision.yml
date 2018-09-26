@@ -1,4 +1,4 @@
---- # EC2 MODULE  PROVISIONING EXAMPLE
+--- # EC2  MODULE  PROVISIONING EXAMPLE
 - hosts:  local
   connection: local
   remote_user: test
