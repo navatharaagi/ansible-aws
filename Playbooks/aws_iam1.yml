@@ -1,4 +1,4 @@
---- #  AWS IAM Secret Key Creation MODULE EXAMPLE
+--- # AWS IAM Secret Key Creation MODULE EXAMPLE
 - hosts : localhost
   connection: local
   remote_user: test
