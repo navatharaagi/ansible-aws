@@ -20,5 +20,5 @@
       period: 300
       evaluation_periods: 6
       unit: “Percent”
-      description: “This alarm fires when CPU is greater than 25% for 30mins"
+      description: “ This alarm fires when CPU is greater than 25% for 30mins"
       dimensions: { ‘InstanceID’ : ‘Copy & Paste Instance ID’ }
