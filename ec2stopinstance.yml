@@ -1,4 +1,4 @@
---- # EC2  Remote Facts Running list module
+--- # EC2 Remote Facts Running list module
 - hosts: local
   connection: local
   gather_facts: no
