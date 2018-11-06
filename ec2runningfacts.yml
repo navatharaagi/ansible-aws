@@ -11,7 +11,7 @@
       filters:
           instance-state-name: running
     register: ec2_facts
-  # debug  that output, which gives  all  ec2 detailed information
+  # debug that output, which gives  all  ec2 detailed information
   - name: Debug
     debug:
       msg: '{{ ec2_facts }}'
