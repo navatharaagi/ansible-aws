@@ -14,7 +14,7 @@
 #  Added check for existence of the tomcat user
 #
 
-#  Location of JAVA_HOME (bin files)
+#   Location of JAVA_HOME (bin files)
 export JAVA_HOME=/usr/lib/jvm/jre
 
 #  Add Java binary files to PATH
