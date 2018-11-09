@@ -45,7 +45,7 @@ start() {
   then
     echo -e "\e[00;31mTomcat is already running (pid: $pid)\e[00m"
   else
-    #  Start tomcat
+    # Start tomcat
     echo -e "\e[00;32mStarting tomcat\e[00m"
     #  ulimit -n 100000
     #  umask 007
