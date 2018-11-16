@@ -8,7 +8,7 @@
   - name: Gather facts
     ec2_remote_facts:
      region: '{{ aws_region }}'
-  #  just show the instance-id
+  # just show the instance-id
   - debug:
      msg: "{{ hostvars[inventory_hostname]['ansible_ec2_instance_id']}}"
   - name: destroy all instances
