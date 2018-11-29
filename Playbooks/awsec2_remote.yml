@@ -1,4 +1,4 @@
---- # EC2_REMOTE FACTS MODULE EXAMPLE
+--- #  EC2_REMOTE FACTS MODULE EXAMPLE
 - hosts:  localhost
   connection: local
   remote_user: test
